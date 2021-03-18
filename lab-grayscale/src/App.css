@@ -11,7 +11,7 @@ body {
   background-image: url('https://startbootstrap.github.io/startbootstrap-grayscale/assets/img/bg-masthead.jpg');
   display: flex;
   font-family: 'Nunito', sans-serif;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 header {
@@ -19,7 +19,7 @@ header {
   height: 10vh;
   background-color: whitesmoke;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   font-weight: bold;
   font-size: larger;
@@ -42,11 +42,11 @@ nav {
 
 @keyframes drop {
   0% {
-    transition: translate(100%);
+    transition: rotate(0, 100%);
   }
 
   100% {
-    transform: translate(0);
+    transform: rotate(0);
   }
 }
 
@@ -57,7 +57,7 @@ nav {
   position: absolute;
   color: black;
   width: 100%;
-  height: 15vh;
+  height: 10vh;
   right: -1vw;
   top: 10vh;
   animation-name: drop;
@@ -68,7 +68,7 @@ nav {
 ul {
   position: absolute;
   top: 100px;
-  /* left: 35px; */
+  left: 35px;
   font-size: 22px;
   text-align: left;
   padding-right: 5px;
@@ -83,7 +83,7 @@ ul {
   color: #64a19d;
   border: 1px solid #64a19d;
   border-radius: 10px;
-  position: relative;
+  position: absolute;
   margin-top: 2vh;
   margin-right: 5vw;
 }
@@ -119,25 +119,25 @@ ul {
 }
 
 
-@media (min-width: 481px) {
+ @media (max-width: 481px) { 
   header {
-    position: fixed;
+    position: sticky;
+    top: 0;
   }
   nav {
-    position: fixed;
+    position: sticky;
+    top: 0;
   }
-}
+} 
 
-@media (min-width: 780px) {
+/* @media (max-width: 780px) {
   header {
-    position: sticky;
-    opacity: 0;
+    
   }
   nav {
-    position: sticky;
-    opacity: 0;
+   
   }
-}
+}  */
 
 
 
