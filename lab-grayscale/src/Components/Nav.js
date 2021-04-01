@@ -23,6 +23,11 @@ class Nav extends Component {
     render(){
         return(
             <nav>
+                <div className="horizontal-menu">
+                    <a>About</a>
+                    <a>Projects</a>
+                    <a>Contact</a>
+                </div>
                 <button className='nav-button' onClick={this.menu}>Menu</button>
             <ul className={this.state.menu === 'closed' ? "closed" : "open"} >
                 <li>About</li>

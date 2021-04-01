@@ -10,8 +10,14 @@ body {
   height: 100vh;
   background-image: url('https://startbootstrap.github.io/startbootstrap-grayscale/assets/img/bg-masthead.jpg');
   display: flex;
+  /* background-size: cover; */
+  flex-direction: column;
   font-family: 'Nunito', sans-serif;
-  /* z-index: -1; */
+  /* linear-gradient(to bottom, gray, darkgray) okay using this, figure out how to overlay a gradient over an background image. why didn't this work? tried it in the backgroud-image: property */
+}
+
+.top {
+  display: flex;
 }
 
 header {
@@ -101,22 +107,30 @@ ul {
 .grayscale-content{
   display: flex;
   flex-direction: column;
-  position: relative;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  height: 65vh;
   font-family: "Nunito", sans-serif;
-  /* width: 100vw; */
-  /* height: 100vh; */
-  color: silver;
 }
 
-.p {
+.grayscale {
+  font-size: 3em;
+  background: -webkit-linear-gradient(white, gray, black);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: silver;
   width: 250px;
   text-align: center;
   margin: 10px;
 }
 
-.main-button {
+.get-started {
   height: 50px;
   width: 200px;
   background-color: #64a19d;
@@ -126,23 +140,32 @@ ul {
   outline: none;
 }
 
-
-@media (min-width: 480px) { 
-  /* header {
-    position: sticky;
-    top: 0;
+@media (max-width: 480px) {
+  .horizontal-menu{
+    display: none;
   }
-  nav {
-    position: sticky;
-    top: 0;
-  } */
+}
+@media (min-width: 480px) { 
+  .horizontal-menu {
+    display: none;
+  }
 } 
 
 @media (min-width: 780px) {
   header, nav {
     background-color: transparent;
-    /* position: absolute; */
+    
   }
+  .nav-button {
+    display: none;
+  }
+  .horizontal-menu {
+    height: 10vh;
+    width: 30vw;
+    display: flex;
+    justify-content: space-between;
+  }
+  
 } 
 
 

@@ -7,10 +7,10 @@ function App() {
   return (
     <div>
       <div className="App">
+        <div className="top">
         <Header />
         <Nav />
-      </div>
-      <div>
+        </div>
         <Grayscale />
       </div>
     </div>
